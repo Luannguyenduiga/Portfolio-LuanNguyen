@@ -286,7 +286,6 @@ export default function Index() {
         { name: "Git / GitHub", level: 85 },
         { name: "Docker", level: 70 },
         { name: "Postman", level: 85 },
-        { name: "Linux", level: 70 },
       ],
     },
   ];
