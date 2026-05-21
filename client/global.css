@@ -1,100 +1,90 @@
 /** @import must precede all other statements */
-@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  /**
-   * Tailwind CSS theme
-   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
-   * A different format will require also updating the theme in tailwind.config.ts.
-  */
   :root {
-    --background: 225 10% 3%;
-    --foreground: 225 5% 95%;
+    --background: 220 20% 4%;
+    --foreground: 210 20% 92%;
 
-    --card: 225 10% 8%;
-    --card-foreground: 225 5% 95%;
+    --card: 220 18% 7%;
+    --card-foreground: 210 20% 92%;
 
-    --popover: 225 10% 8%;
-    --popover-foreground: 225 5% 95%;
+    --popover: 220 18% 7%;
+    --popover-foreground: 210 20% 92%;
 
-    --primary: 225 5% 95%;
-    --primary-foreground: 225 10% 8%;
+    --primary: 170 100% 50%;
+    --primary-foreground: 220 20% 4%;
 
-    --secondary: 200 100% 50%;
-    --secondary-foreground: 225 10% 8%;
+    --secondary: 220 18% 12%;
+    --secondary-foreground: 210 20% 92%;
 
-    --muted: 225 10% 40%;
-    --muted-foreground: 225 5% 65%;
+    --muted: 220 15% 15%;
+    --muted-foreground: 215 15% 55%;
 
-    --accent: 180 100% 50%;
-    --accent-foreground: 225 10% 8%;
+    --accent: 170 100% 50%;
+    --accent-foreground: 220 20% 4%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 225 10% 20%;
-    --input: 225 10% 15%;
-    --ring: 225 5% 95%;
+    --border: 220 15% 14%;
+    --input: 220 15% 12%;
+    --ring: 170 100% 50%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 225 10% 8%;
+    --sidebar-background: 220 18% 7%;
+    --sidebar-foreground: 210 20% 92%;
+    --sidebar-primary: 170 100% 50%;
+    --sidebar-primary-foreground: 220 20% 4%;
+    --sidebar-accent: 170 100% 50%;
+    --sidebar-accent-foreground: 220 20% 4%;
+    --sidebar-border: 220 15% 14%;
+    --sidebar-ring: 170 100% 50%;
 
-    --sidebar-foreground: 225 5% 95%;
-
-    --sidebar-primary: 225 5% 95%;
-
-    --sidebar-primary-foreground: 225 10% 8%;
-
-    --sidebar-accent: 200 100% 50%;
-
-    --sidebar-accent-foreground: 225 10% 8%;
-
-    --sidebar-border: 225 10% 20%;
-
-    --sidebar-ring: 225 5% 95%;
+    /* Custom design tokens */
+    --terminal-green: 142 70% 55%;
+    --terminal-cyan: 170 100% 50%;
+    --terminal-blue: 210 100% 60%;
+    --terminal-purple: 270 80% 65%;
+    --terminal-yellow: 45 100% 60%;
+    --terminal-orange: 25 100% 60%;
+    --terminal-red: 0 80% 60%;
+    --glow-cyan: 0 0% 0% / 0;
   }
 
   .dark {
-    --background: 225 10% 3%;
-    --foreground: 225 5% 95%;
-
-    --card: 225 10% 8%;
-    --card-foreground: 225 5% 95%;
-
-    --popover: 225 10% 8%;
-    --popover-foreground: 225 5% 95%;
-
-    --primary: 225 5% 95%;
-    --primary-foreground: 225 10% 8%;
-
-    --secondary: 200 100% 55%;
-    --secondary-foreground: 225 10% 8%;
-
-    --muted: 225 10% 40%;
-    --muted-foreground: 225 5% 65%;
-
-    --accent: 180 100% 50%;
-    --accent-foreground: 225 10% 8%;
-
+    --background: 220 20% 4%;
+    --foreground: 210 20% 92%;
+    --card: 220 18% 7%;
+    --card-foreground: 210 20% 92%;
+    --popover: 220 18% 7%;
+    --popover-foreground: 210 20% 92%;
+    --primary: 170 100% 50%;
+    --primary-foreground: 220 20% 4%;
+    --secondary: 220 18% 12%;
+    --secondary-foreground: 210 20% 92%;
+    --muted: 220 15% 15%;
+    --muted-foreground: 215 15% 55%;
+    --accent: 170 100% 50%;
+    --accent-foreground: 220 20% 4%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
-
-    --border: 225 10% 20%;
-    --input: 225 10% 15%;
-    --ring: 225 5% 95%;
-    --sidebar-background: 225 10% 8%;
-    --sidebar-foreground: 225 5% 95%;
-    --sidebar-primary: 225 5% 95%;
-    --sidebar-primary-foreground: 225 10% 8%;
-    --sidebar-accent: 200 100% 55%;
-    --sidebar-accent-foreground: 225 10% 8%;
-    --sidebar-border: 225 10% 20%;
-    --sidebar-ring: 225 5% 95%;
+    --border: 220 15% 14%;
+    --input: 220 15% 12%;
+    --ring: 170 100% 50%;
+    --sidebar-background: 220 18% 7%;
+    --sidebar-foreground: 210 20% 92%;
+    --sidebar-primary: 170 100% 50%;
+    --sidebar-primary-foreground: 220 20% 4%;
+    --sidebar-accent: 170 100% 50%;
+    --sidebar-accent-foreground: 220 20% 4%;
+    --sidebar-border: 220 15% 14%;
+    --sidebar-ring: 170 100% 50%;
   }
 }
 
@@ -105,11 +95,11 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: "Sora", sans-serif;
+    font-family: "Inter", sans-serif;
   }
 
-  code {
-    font-family: "Fira Code", monospace;
+  code, .font-mono {
+    font-family: "JetBrains Mono", monospace;
   }
 
   :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
@@ -125,5 +115,182 @@
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-bold;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: hsl(220 20% 4%);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(220 15% 20%);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(170 100% 50% / 0.5);
+  }
+}
+
+@layer utilities {
+  /* Terminal cursor blink */
+  .cursor-blink {
+    animation: blink 1s step-end infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  /* Glow effects */
+  .glow-cyan {
+    box-shadow: 0 0 20px hsl(170 100% 50% / 0.15),
+                0 0 40px hsl(170 100% 50% / 0.08),
+                0 0 80px hsl(170 100% 50% / 0.04);
+  }
+
+  .glow-cyan-strong {
+    box-shadow: 0 0 15px hsl(170 100% 50% / 0.3),
+                0 0 30px hsl(170 100% 50% / 0.15),
+                0 0 60px hsl(170 100% 50% / 0.08);
+  }
+
+  .text-glow-cyan {
+    text-shadow: 0 0 10px hsl(170 100% 50% / 0.5),
+                 0 0 20px hsl(170 100% 50% / 0.25);
+  }
+
+  .text-glow-green {
+    text-shadow: 0 0 10px hsl(142 70% 55% / 0.5),
+                 0 0 20px hsl(142 70% 55% / 0.25);
+  }
+
+  /* Grid background */
+  .bg-grid {
+    background-image:
+      linear-gradient(hsl(220 15% 14% / 0.5) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(220 15% 14% / 0.5) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  /* Dot pattern */
+  .bg-dots {
+    background-image: radial-gradient(circle, hsl(220 15% 20%) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  /* Scan line effect */
+  .scanlines::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      hsl(170 100% 50% / 0.015) 2px,
+      hsl(170 100% 50% / 0.015) 4px
+    );
+    pointer-events: none;
+  }
+
+  /* Glassmorphism card */
+  .glass-card {
+    background: hsl(220 18% 7% / 0.6);
+    backdrop-filter: blur(16px);
+    border: 1px solid hsl(220 15% 14% / 0.8);
+  }
+
+  /* Terminal window style */
+  .terminal-window {
+    background: hsl(220 20% 5% / 0.95);
+    border: 1px solid hsl(220 15% 14%);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  /* Typing animation */
+  .typing-text {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid hsl(170 100% 50%);
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: hsl(170 100% 50%) }
+  }
+
+  /* Floating animation */
+  .float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+
+  /* Pulse ring */
+  .pulse-ring {
+    animation: pulse-ring 2s ease-out infinite;
+  }
+
+  @keyframes pulse-ring {
+    0% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 hsl(170 100% 50% / 0.4);
+    }
+    70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 10px hsl(170 100% 50% / 0);
+    }
+    100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 hsl(170 100% 50% / 0);
+    }
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(170 100% 50%), hsl(210 100% 60%), hsl(270 80% 65%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Gradient text cyan-green */
+  .gradient-text-cyan {
+    background: linear-gradient(135deg, hsl(170 100% 50%), hsl(142 70% 55%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Code highlight colors */
+  .code-keyword { color: hsl(270 80% 70%); }
+  .code-string { color: hsl(142 70% 55%); }
+  .code-function { color: hsl(45 100% 65%); }
+  .code-comment { color: hsl(220 15% 40%); }
+  .code-type { color: hsl(170 100% 50%); }
+  .code-number { color: hsl(25 100% 65%); }
+  .code-operator { color: hsl(210 100% 70%); }
+
+  /* Noise texture overlay */
+  .noise-overlay::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    pointer-events: none;
   }
 }
